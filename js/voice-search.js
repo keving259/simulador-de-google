@@ -2,6 +2,7 @@
 const voiceSearch = document.querySelector(".voice-search");
 let microAceptado = false;
 
+/* Se hiceiron funciones flecha */
 const voiceSearchModalOpen = ()=>{
 	voiceSearch.style.display = "flex";
 	voiceSearch.style.animation = "aparecer 0.5s forwards";
@@ -12,7 +13,7 @@ const voiceSearchModalOpen = ()=>{
 const voiceSearchModalClose = () =>{
 	voiceSearch.style.animation = "desaparecer 0.25s forwards";
 	setTimeout(()=>{
-	    voiceSearch.style.display = "none";
+		voiceSearch.style.display = "none";
 	},250)
 }
 
@@ -37,6 +38,7 @@ const voiceRecognition = () =>{
     recognition.start();
 }
 
+/* Se definen primero las funciones, después esto */
 document.querySelector('.form__microphone-icon').addEventListener("click",voiceSearchModalOpen);
 document.querySelector(".voice-search__close-modal").addEventListener("click",voiceSearchModalClose);
 document.querySelector(".voice-search__microphone-border").addEventListener("click",voiceRecognition)
